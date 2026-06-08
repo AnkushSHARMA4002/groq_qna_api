@@ -1,6 +1,0 @@
-Install Libraries - 
-
-pip install groq fastapi uvicorn python-dotenv
-
-Run - API 
-uvicorn api:app --reload
