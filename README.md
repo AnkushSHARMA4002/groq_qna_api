@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project converts the Day 5 Groq AI Productivity Assistant CLI application into a FastAPI-based REST API. Users can send tasks through API requests and receive AI-generated responses powered by Groq.
+This project converts the Groq AI Productivity Assistant CLI application into a FastAPI-based REST API. Users can send tasks through API requests and receive AI-generated responses powered by Groq.
 
 ## Features
 
