@@ -1,35 +1,79 @@
-# Groq AI Productivity Assistant API
+# Groq AI Productivity Assistant
 
 ## Overview
 
-This project converts the Groq AI Productivity Assistant CLI application into a FastAPI-based REST API. Users can send tasks through API requests and receive AI-generated responses powered by Groq.
+Groq AI Productivity Assistant is a Python application powered by the Groq API. It helps users generate AI-based responses for productivity-related tasks such as study plans, learning roadmaps, summaries, task breakdowns, and other planning activities.
+
+This project was later extended with a FastAPI wrapper to expose the functionality through REST APIs.
 
 ## Features
 
+* AI-powered task assistance using Groq
+* Fast and efficient response generation
 * FastAPI integration
-* POST /generate endpoint
+* REST API endpoints
 * Bearer Token authentication
-* Response saved to outputs/response.txt
-* Environment variables using .env
-* Health check endpoint
-* Optional output retrieval endpoint
+* Environment variable configuration using `.env`
+* Response storage in `outputs/response.txt`
+* Swagger documentation support
+
+## Technologies Used
+
+* Python
+* FastAPI
+* Groq API
+* Uvicorn
+* Pydantic
+* Python Dotenv
+* Git & GitHub
 
 ## Project Structure
 
-```text
 grok_qna_api/
-│
+
 ├── api.py
+
 ├── .env
+
 ├── .env.example
+
+├── .gitignore
+
 ├── requirements.txt
+
 ├── README.md
-│
-└── outputs/
-    └── response.txt
-```
+
+├── outputs/
+
+│ └── response.txt
+
+└── screenshots/
 
 ## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AnkushSHARMA4002/groq_qna_api.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd groq_qna_api
+```
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
 
 Install dependencies:
 
@@ -46,13 +90,15 @@ GROQ_API_KEY=your_groq_api_key
 API_SECRET_TOKEN=mytoken123
 ```
 
-## Run the Application
+## Running the Application
+
+Start the FastAPI server:
 
 ```bash
 python -m uvicorn api:app --reload
 ```
 
-Open Swagger Docs:
+Open Swagger Documentation:
 
 ```text
 http://127.0.0.1:8000/docs
@@ -62,29 +108,15 @@ http://127.0.0.1:8000/docs
 
 ### GET /
 
-Health check endpoint.
+Returns API health status.
 
 ### POST /generate
 
-Generate an AI response from a task.
-
-Header:
-
-```text
-Authorization: Bearer mytoken123
-```
-
-Request Body:
-
-```json
-{
-  "task": "Create a 3-day FastAPI study plan"
-}
-```
+Generates an AI response for a given task.
 
 ### GET /outputs
 
-Returns the latest saved output from `outputs/response.txt`.
+Returns the latest saved output.
 
 ## Status Codes
 
@@ -93,11 +125,6 @@ Returns the latest saved output from `outputs/response.txt`.
 * 401 Unauthorized
 * 500 Internal Server Error
 
-## Technologies Used
+## Author
 
-* Python
-* FastAPI
-* Groq API
-* Uvicorn
-* Pydantic
-* Python-Dotenv
+Ankush Sharma
