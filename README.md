@@ -87,7 +87,7 @@ Create a `.env` file:
 
 ```env
 GROQ_API_KEY=your_groq_api_key
-API_SECRET_TOKEN=mytoken123
+
 ```
 
 ## Running the Application
