@@ -71,7 +71,7 @@ Generate an AI response from a task.
 Header:
 
 ```text
-Authorization: Bearer mytoken123
+Authorization: secret_token
 ```
 
 Request Body:
